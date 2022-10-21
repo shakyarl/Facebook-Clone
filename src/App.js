@@ -1,12 +1,12 @@
 import './App.css';
+import Header from './Header';
 
 function App() {
   return (
     // BEM naming convetion
     <div className="app">
-      <h1>Lets build the facebook clone</h1>
 
-      {/* Header */}
+      <Header />
 
       {/* App Body */}
         {/* Side Bar */}
