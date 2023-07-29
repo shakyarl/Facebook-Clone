@@ -13,19 +13,11 @@ function Feed() {
 
   useEffect(() => {
     getPosts();
-    // getPosts().then((data) => {
-    //   setPosts(data);
-    //   console.log(posts);
-    // }).catch(error => {
-    //   console.log(error);
-    // })
   }, [])
 
   const getPosts = async () => {
     const postSnapShot = await getDocs(postsCol);
     setPosts(postSnapShot.docs.map(doc => ({ id: doc.id, data: doc.data() })));
-    console.log(posts);
-    // return postList;
   }
 
   return (
