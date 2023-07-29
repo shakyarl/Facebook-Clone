@@ -7,7 +7,7 @@ function Post({ profilePic, image, username, timestamp, message }) {
 
     const getDate = (seconds,nanoseconds) => {
         let ts = (seconds + nanoseconds / 1000000000) * 1000;
-        return new Date(ts).toDateString();
+        return new Date(ts).toUTCString();
     }
     return (
         <div className='post'>
